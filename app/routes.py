@@ -4,4 +4,4 @@ from app import app
 
 @app.route('/')
 def index():
-    return 'Hello Word'
+    return render_template('index.html',title='Home')
