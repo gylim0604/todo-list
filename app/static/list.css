@@ -1,0 +1,19 @@
+body{
+    background-color: hsl(54, 60%, 87%);
+}
+
+.item-container{
+    border-bottom: 1px hsl(30, 100%, 30%)  solid;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.item-el{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 150%;
+}
+
+
+.control-label {
+    display: none;
+}
