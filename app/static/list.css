@@ -6,13 +6,44 @@ body{
     border-bottom: 1px hsl(30, 100%, 30%)  solid;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    cursor: pointer;
 }
+
+.item-container:hover{
+    background:  hsl(55, 36%, 74%);
+}
+
 
 .item-el{
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 150%;
+    cursor: pointer;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
+.strikethrough{
+    color: hsla(0, 0%, 69%, 0.842);
+    text-decoration: line-through;
+}
+
+#trash-icon{
+    background-color: Transparent;
+    border: none;           
+    cursor:pointer;  
+    opacity: 0.6;
+}
+
+#trash-icon:hover{
+    opacity: 1;
+}
+#trash-icon:focus{
+    outline: none;
+    box-shadow: none;
+}
 
 .control-label {
     display: none;

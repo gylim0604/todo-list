@@ -1,9 +1,10 @@
-<div class= "container item-container">
+<div class= "container-fluid item-container" id ="item-{{item.id}}" onclick=myFunction('item-{{item.id}}') >
     <div class="row">
-        <span class="col-lg-11 item-el" id ="item-{{item.id}}">{{ item.body }}</span>
+
+        <span class="col-sm-11 col-xs-10 item-el">{{ item.body }}</span>
     
-        <form class="col-sm-1 delete-item" method="post" action="{{ url_for('delete_item', item_id=item.id) }}">
-            <input class="btn" type="submit" name="delete" value="Delete">
+        <form class="col-xs-1 delete-item" method="post" action="{{ url_for('delete_item', item_id=item.id) }}" style="cursor: pointer;">
+            <button class="btn" id="trash-icon"><i class="fas fa-trash-alt"></i></button>
         </form>
     </div>
 </div>

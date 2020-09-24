@@ -11,20 +11,31 @@
         <div class="container item_form" style="visibility: hidden;">
             {{ wtf.quick_form(form) }}
         </div>
+
+        <div >
+        </div>
 {% endblock %}
 
 
 {% block scripts %}
     <script>
         function toggle_display(){
-        el = document.querySelector('.item_form');
-        
-        if(el.style.visibility == 'hidden'){
-            el.style.visibility = 'visible'
-        }else{
-            el.style.visibility = 'hidden'
+            el = document.querySelector('.item_form');
+            
+            if(el.style.visibility == 'hidden'){
+                el.style.visibility = 'visible'
+            }else{
+                el.style.visibility = 'hidden'
+            }
         }
-    }
+        
+
+        function myFunction(item_id){
+            var temp = document.getElementById(item_id);
+            var spans = temp.getElementsByTagName("span");
+            spans[0].classList.toggle("strikethrough");
+        }
     </script>
+
     
 {% endblock %}
