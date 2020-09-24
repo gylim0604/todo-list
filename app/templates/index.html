@@ -2,15 +2,17 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
+        
+        <button type="button" class="btn btn-dark" onclick="toggle_display()">Add New</button>
+        <div class="container item_form" style="display: none;">
+            {{ wtf.quick_form(form) }}
+        </div>
         <ul style="list-style-type:none;">
             {% for item in items %}
                 {% include '_item.html' %}
             {% endfor %}
         </ul>
-        <button type="button" class="btn btn-dark" onclick="toggle_display()">Add New</button>
-        <div class="container item_form" style="visibility: hidden;">
-            {{ wtf.quick_form(form) }}
-        </div>
+
 
         <div >
         </div>
@@ -20,16 +22,10 @@
 {% block scripts %}
     <script>
         function toggle_display(){
-            el = document.querySelector('.item_form');
-            
-            if(el.style.visibility == 'hidden'){
-                el.style.visibility = 'visible'
-            }else{
-                el.style.visibility = 'hidden'
-            }
-        }
-        
+            el = document.querySelector('.item_form');      
+            el.style.display == 'none' ? el.style.display = 'block' : el.style.display = 'none';
 
+        }
         function myFunction(item_id){
             var temp = document.getElementById(item_id);
             var spans = temp.getElementsByTagName("span");

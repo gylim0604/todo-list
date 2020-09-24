@@ -5,6 +5,6 @@ from wtforms.validators import DataRequired, ValidationError
 from app.models import Item
 
 class AddItemForm(FlaskForm):
-    body = StringField(default='item...',validators=[DataRequired()])
+    body = StringField(validators=[DataRequired()], render_kw={"placeholder": "item..."})
     checked=1
-    submit = SubmitField('Add :D')
+    submit = SubmitField('Add')
