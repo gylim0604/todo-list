@@ -1,0 +1,4 @@
+features:
+strike-through
+remove
+save-list
